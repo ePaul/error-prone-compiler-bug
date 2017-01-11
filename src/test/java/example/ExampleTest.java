@@ -7,17 +7,17 @@ import org.junit.Test;
 public class ExampleTest {
 
     @SafeVarargs
-    final <E> String example(Class<? super E>... classes) {
+    final <E> String example(final Class<? super E>... classes) {
         return "with classes";
     }
 
     @SafeVarargs
-    final <E> String example(E... items) {
+    final <E> String example(final E... items) {
         return "with items";
     }
 
     @SafeVarargs
-    final String indirectCall(Class<? super ExampleTest>... classes) {
+    final String indirectCall(final Class<? super ExampleTest>... classes) {
         return example(classes);
     }
 
